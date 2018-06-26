@@ -31,8 +31,8 @@ var transporter = nodemailer.createTransport({
   security: true,
   port: 993,	
   auth: {
-    user: 'henry0929016816@gmail.com',
-    pass: 'henry19951119'
+    user: '',
+    pass: ''
   }
 });
 
@@ -54,7 +54,7 @@ app.post("/identify", function(req,res){
   randomnumber=req.body.randomnumber;
   //send randomnumber
   var mailOptions = {
-    from: 'henry0929016816@gmail.com',
+    from: '',
     to: email,
     subject: '茶水表咯，你要的認證信',
     text: randomnumber[0]+randomnumber[1]+randomnumber[2]+randomnumber[3] 
